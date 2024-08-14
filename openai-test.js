@@ -11,10 +11,7 @@ const openai = new OpenAI({
 
 async function main() {
   const completion = await openai.chat.completions.create({
-    messages: [
-      { role: "system", content: "You are a helpful assistant." },
-      { role: "user", content: "1에서 30까지 홀수인 숫자를 알려줘" },
-    ],
+    messages: [{ role: "user", content: "1에서 30까지 홀수인 숫자를 알려줘" }],
     model: process.env.OPENAI_API_MODEL,
   });
 

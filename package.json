@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^16.4.5",
-    "openai": "^4.55.4"
+    "openai": "^4.55.4",
+    "tiktoken": "^1.0.15"
   },
   "name": "openai-api-tutorial",
   "version": "1.0.0",
