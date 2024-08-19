@@ -1,21 +1,13 @@
-import OpenAI from "openai";
+// Use langhcain/openai package to test OpenAI API
+import { ChatOpenAI } from "@langchain/openai";
 import dotenv from "dotenv";
 
-// .env 파일에서 환경 변수 가져오기
 dotenv.config();
 
-// OpenAI 클라이언트 생성
-const openai = new OpenAI({
+const chatModel = new ChatOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
+  model: process.env.OPENAI_API_MODEL,
 });
 
-async function main() {
-  const completion = await openai.chat.completions.create({
-    messages: [{ role: "user", content: "1에서 30까지 홀수인 숫자를 알려줘" }],
-    model: process.env.OPENAI_API_MODEL,
-  });
-
-  console.log(completion.choices[0]);
-}
-
-main();
+const response = await chatModel.invoke("what is Samsung?");
+console.log(response);

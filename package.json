@@ -1,10 +1,11 @@
 {
   "dependencies": {
+    "@langchain/openai": "^0.2.6",
     "dotenv": "^16.4.5",
-    "openai": "^4.55.4",
+    "langchain": "^0.2.16",
     "tiktoken": "^1.0.15"
   },
-  "name": "openai-api-tutorial",
+  "name": "doc-query-chatbot",
   "version": "1.0.0",
   "type": "module",
   "main": "openai-test.js",
